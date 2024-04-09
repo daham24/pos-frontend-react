@@ -1,3 +1,4 @@
+import  {useState} from "react";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import './App.css'
 import Home from "./components/Home.tsx";
@@ -5,7 +6,15 @@ import Customer from "./components/Customer.tsx";
 import Product from "./components/Product.tsx";
 import Order from "./components/Order.tsx";
 
+
 function App() {
+
+  const [activeItem, setActiveItem] = useState('home');
+
+  // @ts-ignore
+  const handleItemClick = (itemName) => {
+    setActiveItem(itemName);
+  };
 
   return (
       <Router>
@@ -21,23 +30,22 @@ function App() {
               </button>
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                  <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to={'/'}>Home</Link>
+                  <li className={`nav-item ${activeItem === 'home' ? 'active' : ''}`}>
+                    <Link className="nav-link" to={'/'} onClick={() => handleItemClick('home')}>Home</Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to={'/customer'}>Customers</Link>
+                  <li className={`nav-item ${activeItem === 'customers' ? 'active' : ''}`}>
+                    <Link className="nav-link" to={'/customer'} onClick={() => handleItemClick('customers')}>Customers</Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to={'/orders'}>Order Management</Link>
+                  <li className={`nav-item ${activeItem === 'orders' ? 'active' : ''}`}>
+                    <Link className="nav-link" to={'/orders'} onClick={() => handleItemClick('orders')}>Order Management</Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to={'/product'}>Products</Link>
+                  <li className={`nav-item ${activeItem === 'products' ? 'active' : ''}`}>
+                    <Link className="nav-link" to={'/product'} onClick={() => handleItemClick('products')}>Products</Link>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-
 
           <Routes>
             <Route path={'/'} element={<Home/>}/>
@@ -47,8 +55,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-
-  )
+  );
 }
 
 export default App
