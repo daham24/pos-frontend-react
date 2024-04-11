@@ -25,7 +25,7 @@ function Home() {
                             description={'Goods, merchandise, offerings.'}
                             title={'Products'}
                             value={250}
-                            key={1}
+                            key={2}
                         />
                     </div>
                     <div className="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -34,7 +34,7 @@ function Home() {
                             description={'Purchases, requests, transactions'}
                             title={'Orders'}
                             value={250}
-                            key={1}
+                            key={3}
                         />
                     </div>
                     <div className="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -43,7 +43,7 @@ function Home() {
                             description={'Revenue, earnings, profit, gains.'}
                             title={'Income'}
                             value={250}
-                            key={1}
+                            key={4}
                         />
                     </div>
                 </div>

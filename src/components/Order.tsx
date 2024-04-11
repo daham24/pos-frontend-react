@@ -119,8 +119,8 @@ function Order() {
                             <tr>
                                 <td>P-1001</td>
                                 <td>Wireless Bluetooth Earbuds</td>
-                                <td>200 units</td>
-                                <td>20</td>
+                                <td>$15.00</td>
+                                <td>10</td>
                                 <td>$150.00</td>
                                 <td>
                                     <button className={'btn btn-outline-danger btn-sm'}>Remove</button>

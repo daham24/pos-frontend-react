@@ -1,4 +1,4 @@
-import  {useState} from "react";
+import {SetStateAction, useState} from "react";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import './App.css'
 import Home from "./components/Home.tsx";
@@ -11,8 +11,7 @@ function App() {
 
   const [activeItem, setActiveItem] = useState('home');
 
-  // @ts-ignore
-  const handleItemClick = (itemName) => {
+  const handleItemClick = (itemName: SetStateAction<string>) => {
     setActiveItem(itemName);
   };
 
