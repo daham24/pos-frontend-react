@@ -24,9 +24,9 @@ function Order() {
                         <div className="form-group">
                             <label htmlFor={'product'}>Select Customer</label>
                             <select id="product" className={'form-control'}>
-                                <option value="#" disabled selected>Use Options</option>
-                                <option value="#">Customer 1</option>
-                                <option value="#">Customer 2</option>
+                                <option value="UseOption" disabled selected>Use Options</option>
+                                <option value="Customer1">Customer 1</option>
+                                <option value="Customer2">Customer 2</option>
                             </select>
                         </div>
                     </div>
@@ -55,9 +55,9 @@ function Order() {
                         <div className="form-group">
                             <label htmlFor={'product'}>Select Product</label>
                             <select id="product" className={'form-control'}>
-                            <option value="#" disabled selected>Use Options</option>
-                                <option value="#">Product 1</option>
-                                <option value="#">Product 2</option>
+                            <option value="UseeOption" disabled selected>Use Options</option>
+                                <option value="Product1">Product 1</option>
+                                <option value="Product2">Product 2</option>
                             </select>
                         </div>
                     </div>
