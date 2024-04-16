@@ -6,7 +6,6 @@ import Customer from "./components/Customer.tsx";
 import Product from "./components/Product.tsx";
 import Order from "./components/Order.tsx";
 
-
 function App() {
 
   const [activeItem, setActiveItem] = useState('home');
